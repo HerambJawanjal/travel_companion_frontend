@@ -12,8 +12,7 @@ const Container = (props) => {
     <div className='flex flex-wrap-reverse items-center justify-center overflow-auto  p-3 bg-slate-600 h-full rounded-md'>
     <Card/>
     <Card/>
-    <Card/>
-    <Card/>
+    
     </div>
       </>
   )
