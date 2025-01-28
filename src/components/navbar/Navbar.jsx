@@ -6,7 +6,8 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [mobileview,setMobileView]=useState(false);
   return (
-    <nav className="bg-zinc-700 p-3 text-zinc  flex justify-between items-center ">
+    <div className="flex w-full bg-zinc-700 justify-center items-center">
+      <nav className="bg-zinc-700 p-3 w-3/4 text-zinc  flex justify-between items-center ">
       <a
         href="#"
         className=" flex items-center hover:text-white  justify-between "
@@ -25,16 +26,16 @@ const Navbar = () => {
           mobileview ? "block" : "hidden"
         }  lg:flex lg:items-center lg:gap-6  `}>
         <a href="#" className="m-1 hover:text-white ">
-          Home
+          Discover
         </a>
         <a href="#" className="m-1  hover:text-white">
-          Travel agency
+          Trip
         </a>
         <a href="#" className="m-1  hover:text-white">
-          About
+          review
         </a>
         <a href="#" className="m-1  hover:text-white">
-          Contact
+          More
         </a>
       </div>
 
@@ -50,6 +51,7 @@ const Navbar = () => {
         </button>
       </div>
     </nav>
+    </div>
   );
 };
 

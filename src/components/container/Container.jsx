@@ -1,13 +1,14 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Keyboard } from 'swiper/modules'; // Import Keyboard module
+import { EffectCoverflow, Pagination, Keyboard,Mousewheel } from 'swiper/modules'; // Import Keyboard module
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import Card from '../card/Card'; // Assuming you have a Card component for each place
+import './Cantainer.css'
 
 const Container = (props) => {
-  const places = props.places?.features || []; // Fallback if `features` is undefined
+  const places = props.places?.features || []; // Fallback if `features` is undefined 
 
   return (
     <section className="h-5/6 bg-white flex items-center justify-center overflow-hidden ">
@@ -29,6 +30,11 @@ const Container = (props) => {
               enabled: true, // Enable keyboard control
               onlyInViewport: true, // Restrict keyboard control to when Swiper is in the viewport
               pageUpDown: true, // Allow pageUp and pageDown keys for navigation
+            }}
+            mousewheel={{
+              enabled: true, // Enable mousewheel control
+              forceToAxis: true, // Optional: restrict scrolling to the primary axis
+              sensitivity: 1, // Optional: adjust scrolling sensitivity
             }}
             coverflowEffect={{
               rotate: 0,

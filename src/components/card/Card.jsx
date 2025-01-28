@@ -4,7 +4,7 @@ const Card = (props) => {
   const { place } = props; // Destructure place from props
 
   return (
-    <div className="flex  w-auto items-center justify-center">
+    <div className="flex h-full w-auto items-center justify-center">
       <div className=" m-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center justify-center flex-wrap">
         <a href={`https://www.openstreetmap.org/?mlat=${place?.geometry?.coordinates[1]}&mlon=${place?.geometry?.coordinates[0]}`}>
           <img

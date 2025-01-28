@@ -4,6 +4,8 @@ import { getDestination } from "../services/travel_api";
 import Container from "../components/container/Container";
 import Slide from "../components/slides/Slide";
 import Footer from "../components/footer/Footer";
+import SecNav from "../components/SecNav/SecNav";
+
 
 const Home = () => {
   const [location, setLocation] = useState(null); // Start with null to indicate no location
@@ -55,6 +57,7 @@ const Home = () => {
   return (
     <div className="bg-slate-900 h-screen">
       <Navbar />
+      <SecNav/>
       <Slide />
       {loading ? (
         <p>Loading places...</p> // Show a loading message or spinner while waiting
