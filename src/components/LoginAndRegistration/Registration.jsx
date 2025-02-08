@@ -24,7 +24,6 @@ const Registration = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Register an Account
@@ -32,10 +31,10 @@ const Registration = () => {
 
         <form onSubmit={handleSubmit}>
           {/* First Name */}
-          <div className="mb-4">
+         <div className="flex"> <div className="mb-4">
             <label
               htmlFor="firstname"
-              className="block text-gray-700 font-semibold mb-2"
+              className="block mx-2 px-1  text-gray-700 font-semibold mb-2"
             >
               First Name
             </label>
@@ -45,7 +44,7 @@ const Registration = () => {
               name="firstname"
               value={formData.firstname}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="  mx-2 px-1 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your first name"
               required
             />
@@ -55,7 +54,7 @@ const Registration = () => {
           <div className="mb-4">
             <label
               htmlFor="lastname"
-              className="block text-gray-700 font-semibold mb-2"
+              className="block mx-2 px-1  text-gray-700 font-semibold mb-2"
             >
               Last Name
             </label>
@@ -65,11 +64,11 @@ const Registration = () => {
               name="lastname"
               value={formData.lastname}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className=" mx-2 px-1 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your last name"
               required
             />
-          </div>
+          </div></div>
 
           {/* Email */}
           <div className="mb-4">
@@ -144,13 +143,13 @@ const Registration = () => {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{" "}
-            <a href="#" className="text-blue-600 hover:underline">
+            <a href="/login" className="text-blue-600 hover:underline">
               Login
             </a>
           </p>
         </div>
       </div>
-    </div>
+   
   );
 };
 
