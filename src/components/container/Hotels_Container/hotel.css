@@ -1,0 +1,12 @@
+.hotelSwiper .swiper-pagination-bullet {
+    background: #cbd5e1;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .hotelSwiper .swiper-pagination-bullet-active {
+    background: #3b82f6;
+    width: 12px;
+    height: 12px;
+  }
+  
