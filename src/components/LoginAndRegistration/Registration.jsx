@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { handle_Registration } from "../../services/auth_api";
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +18,11 @@ const Registration = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Registration Data:", formData);
-    alert("Registration Successful!");
+   const regist_data=await handle_Registration(formData.firstname, formData.lastname, formData.password, formData.mobileNo, formData.email);
+   console.log(regist_data);
+   
   };
 
   return (
